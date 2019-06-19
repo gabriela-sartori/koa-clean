@@ -1,0 +1,8 @@
+{
+  "name": "koa-clean",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/G4BB3R/koa-clean",
+  "author": "Gabriel Torrecillas Sartori <gabriel.sartori04@gmail.com>",
+  "license": "MIT"
+}

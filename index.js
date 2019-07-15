@@ -9,6 +9,12 @@ module.exports = controller => {
             , idUser = ((ctx.state || {}).user || {}).id
             , res    = await controller (ctx, params, idUser)
 
+        if (Array.isArray (res) && res.length === 2 && Number.isInteger (res[0]) && ! Number.isInteger (res[1])) {
+            ctx.status = res[0]
+            ctx.body = res[1]
+            return
+        }
+
         ctx.body
             = res === true            ? { status: "success" }
             : res === false           ? { error: "internal error" }

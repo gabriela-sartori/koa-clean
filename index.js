@@ -7,12 +7,12 @@ module.exports = controller => {
 
         const params = { ...ctx.query, ...ctx.params, ...ctx.request.body }
             , idUser = ((ctx.state || {}).user || {}).id
-            , res    = await controller (ctx, params, idUser)
+
+        let res = await controller (ctx, params, idUser)
 
         if (Array.isArray (res) && res.length === 2 && Number.isInteger (res[0]) && ! Number.isInteger (res[1])) {
             ctx.status = res[0]
-            ctx.body = res[1]
-            return
+            res = res[1]
         }
 
         ctx.body

@@ -6,7 +6,7 @@ module.exports = controller => {
     return async ctx => {
 
         const params = { ...ctx.query, ...ctx.params, ...ctx.request.body }
-            , idUser = ((ctx.state || {}).user || {}).id
+            , idUser = (ctx.state || {}).user || {}
 
         let res = await controller (ctx, params, idUser)
 

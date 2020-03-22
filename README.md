@@ -1,6 +1,6 @@
 # Koa-Clean
 
-Koa-Clean is a library to simplify koa controllers. It is based on Elixir (Phoenix) controllers. It was heavy tested and works very well in production together with koa-router, koa-jwt and koa-mongo, but will probably work fine with other libraries. Feel free to open an issue on github if it doesn't work for your case.
+Koa-Clean is a library to simplify koa controllers. It was heavy tested and works very well in production together with koa-router, koa-jwt and koa-mongo, but will probably work fine with other libraries. Feel free to open an issue on github if it doesn't work for your case.
 
 ## Install
     
